@@ -5,9 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #263238 !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.center {
+  width: 500px;
+  height: 500px;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.center > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.theSmiley {
+  width: 50px;
+  height: 50px;
+}
+
+.orange img {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.item {
+  animation: spinAround 15s linear infinite;
+}
+
+.main > * > img {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg) translate(140px) scale(.7);
+  }
+  to {
+    transform: rotate(360deg) translate(140px) scale(.7);
+  }
 }
